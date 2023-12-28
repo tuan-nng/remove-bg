@@ -6,6 +6,7 @@ import EraseButton from './components/EraseButton/erase-button';
 import { ErasedImage } from './components/ErasedImage/erased-image';
 import { DragDropImage } from './components/DragDropImage/drag-drop-image';
 import { Footer } from './components/Footer/footer';
+import { Header } from './components/Header/header';
 
 export default function Home() {
   const [arquivoCarregado, setArquivoCarregado] = useState<File>();
@@ -84,6 +85,9 @@ export default function Home() {
   };
 
   return (
+    <>
+    <Header logoSrc='logo-with-text.svg' />
+
     <main className="flex flex-col items-center p-10 gap-8">
 
     <div className="flex items-center gap-8">
@@ -123,6 +127,6 @@ export default function Home() {
 
     <Footer/>
   </main>
-  
+  </>
   );
 }
