@@ -5,6 +5,7 @@ import imglyRemoveBackground, { Config } from '@imgly/background-removal';
 import EraseButton from './components/EraseButton/erase-button';
 import { ErasedImage } from './components/ErasedImage/erased-image';
 import { DragDropImage } from './components/DragDropImage/drag-drop-image';
+import { Footer } from './components/Footer/footer';
 
 export default function Home() {
   const [arquivoCarregado, setArquivoCarregado] = useState<File>();
@@ -119,6 +120,8 @@ export default function Home() {
       status={status}
       arquivoCarregado={!!arquivoCarregado}
     />
+
+    <Footer/>
   </main>
   
   );
