@@ -85,7 +85,7 @@ export default function Home() {
 
     if (extensoesPermitidas.includes(extensoesArquivo)) {
       setError(undefined)
-
+      setArquivoCarregado(file)
       setUrlObjetoImagemCarregada(URL.createObjectURL(file))
     } else {
       setError('Formato de arquivo inválido. Por favor, escolha uma imagem no formato JPG, JPEG ou PNG.')
