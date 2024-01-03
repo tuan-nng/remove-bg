@@ -22,7 +22,7 @@
 Remove.bg is a user-friendly tool that provides a secure and efficient way to remove backgrounds from images. With a focus on privacy, the tool operates entirely on the client-side, ensuring that no data is sent to external servers. Users can enjoy a seamless experience with the convenience of dark and light mode options, as well as access to a history of processed images. Built with Next.js and leveraging the @imgly/background-removal library, Remove.bg offers cutting-edge technology for high-quality background removal, all provided at no cost to the user.
 
 ## Try it! It's free!
-- [Live Preview](https://main--yl-remove-bg.netlify.app/)
+- [Live Preview](https://yl-remove-bg.vercel.app/)
 
 ## Or clone this repo
 Then run
