@@ -1,12 +1,13 @@
 'use client';
 
-import { ChangeEvent, DragEvent, useState } from 'react';
+import { ChangeEvent, DragEvent, useEffect, useState } from 'react';
 import imglyRemoveBackground, { Config } from '@imgly/background-removal';
 import EraseButton from './components/EraseButton/erase-button';
 import { ErasedImage } from './components/ErasedImage/erased-image';
 import { DragDropImage } from './components/DragDropImage/drag-drop-image';
 import { Footer } from './components/Footer/footer';
 import { Header } from './components/Header/header';
+import Historic from './components/Historic/historic';
 
 export default function Home() {
   const [arquivoCarregado, setArquivoCarregado] = useState<File>();
@@ -20,6 +21,22 @@ export default function Home() {
   const [arquivoArrastado, setArquivoArrastado] = useState<boolean>(false);
 
   const [error, setError] = useState<string | undefined>();
+
+  const [historico, setHistorico] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (urImagemRemovida) {
+      setHistorico(prevHistorico => [...prevHistorico, urImagemRemovida]);
+    }
+  }, [urImagemRemovida])
+
+  const resetarStateImagemCarregada = () => {
+    setStatus(undefined)
+    setArquivoCarregado(undefined)
+    setUrlObjetoImagemCarregada(undefined)
+    setUrlImagemRemovida(undefined)
+    setError(undefined)
+  }
 
   function removerFundo() {
     setUrlImagemRemovida(undefined);
@@ -132,9 +149,15 @@ export default function Home() {
         status={status}
         arquivoCarregado={!!arquivoCarregado}
       />
-  
+
+      <Historic
+        listagem={historico}
+        onClick={resetarStateImagemCarregada}
+      />
+
       <Footer/>
     </main>
+
   </>
   
   );
