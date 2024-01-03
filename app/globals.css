@@ -22,4 +22,12 @@
     background-size: 32px 32px;
     background-position: 0 0, 16px 16px;
   }
+
+  html.dark body {
+    background: #1A202C;
+  }
+
+  body {
+    background: #fafafa;
+  }
 }

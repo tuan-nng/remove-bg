@@ -93,8 +93,8 @@ export default function Home() {
       <div className="flex flex-col md:flex-row items-center gap-8">
   
         <div className="title-container">
-          <h1 className="text-3xl font-bold bg-indigo-800 text-transparent bg-clip-text">Remova Fundos de Imagens</h1>
-          <p>100% automático e de graça</p>
+        <h1 className="text-3xl font-bold text-indigo-800 dark:text-indigo-100">Remova Fundos de Imagens</h1>
+          <p className="text-2xl dark:text-indigo-300">100% automático e de graça</p>
         </div>
   
         <div className="flex items-center gap-3">

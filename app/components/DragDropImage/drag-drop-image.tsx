@@ -41,7 +41,7 @@ export function DragDropImage({
             <p className="transition-all duration-1000 bg-gradient-to-br from-indigo-800 hover:from-indigo-600 to-indigo-600 hover:to-indigo-400 p-2 rounded-2xl text-white">
               Carregar arquivo
             </p>
-            <p>Ou solte aqui</p>
+            <p className="text-neutral-900 dark:text-indigo-100">Ou solte aqui</p>
           </div>
         )}
       </label>
