@@ -14,7 +14,7 @@ export default function EraseButton({ arquivoCarregado, status, onClick }: Props
       className={`flex items-center gap-2 rounded-2xl px-8 py-3 text-xl font-bold text-white transition-all duration-1000 sm:p-3 ${
         arquivoCarregado ? status !== 'fail' ? 'bg-gradient-to-br from-indigo-800 to-indigo-600 dark:from-indigo-700 dark:to-indigo-500'
           : 'bg-gradient-to-br from-red-800 to-red-600 dark:from-red-700 dark:to-red-500'
-          : 'bg-neutral-200 cursor-not-allowed'
+          : 'bg-neutral-200 dark:bg-neutral-400 cursor-not-allowed'
       } ${
         status !== 'loading' &&
         status !== 'fail' &&
