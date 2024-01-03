@@ -36,3 +36,7 @@ Then run
     bun dev
 ```
 Open http://localhost:3000 with your browser to see the result.
+![1180f6fe-352f-478a-82ef-e7693e404dad](https://github.com/yasminlopes/remove-bg/assets/75736181/15579be9-25cb-4b94-be66-a9c7caf9c45a)
+
+
+
