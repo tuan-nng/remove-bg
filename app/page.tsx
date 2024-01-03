@@ -19,6 +19,8 @@ export default function Home() {
 
   const [arquivoArrastado, setArquivoArrastado] = useState<boolean>(false);
 
+  const [error, setError] = useState<string | undefined>();
+
   function removerFundo() {
     setUrlImagemRemovida(undefined);
 
@@ -76,11 +78,17 @@ export default function Home() {
     }
   };
 
+  const extensoesPermitidas = ['.jpg', '.jpeg', '.png'];
+
   const handleFileUpload = (file: File) => {
-    if (file) {
-      setUrlImagemRemovida(undefined);
-      setArquivoCarregado(file);
-      setUrlObjetoImagemCarregada(URL.createObjectURL(file));
+    const extensoesArquivo = file.name.substring(file.name.lastIndexOf('.')).toLowerCase();
+
+    if (extensoesPermitidas.includes(extensoesArquivo)) {
+      setError(undefined)
+
+      setUrlObjetoImagemCarregada(URL.createObjectURL(file))
+    } else {
+      setError('Formato de arquivo inválido. Por favor, escolha uma imagem no formato JPG, JPEG ou PNG.')
     }
   };
 
@@ -114,9 +122,10 @@ export default function Home() {
               handleFileInputChange={handleFileInputChange}
             />
           )}
-        </div>
-  
+        </div>  
       </div>
+
+      {error && (<div className="text-red-500">{error}</div>)}
   
       <EraseButton
         onClick={removerFundo}
