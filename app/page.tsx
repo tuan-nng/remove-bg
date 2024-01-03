@@ -87,46 +87,46 @@ export default function Home() {
   return (
     <>
     <Header logoSrc='logo-with-text.svg' />
-
+  
     <main className="flex flex-col items-center p-10 gap-8">
-
-    <div className="flex items-center gap-8">
-      
-    <div className="title-container">
-
-      <h1 className="text-3xl font-bold bg-indigo-800 text-transparent bg-clip-text">Remova Fundos de Imagens</h1>
-      <p>100% automático e de graça</p>
-
-    </div>
   
-    <div className="flex items-center gap-3">
-      {urImagemRemovida ? (
-        <ErasedImage
-          urImagemRemovida={urImagemRemovida}
-          arquivoCarregado={arquivoCarregado?.name}
-        />
-      ) : (
-        <DragDropImage
-          arquivoArrastado={arquivoArrastado}
-          urlObjetoImagemCarregada={urlObjetoImagemCarregada}
-          handleDragEnter={handleDragEnter}
-          handleDragLeave={handleDragLeave}
-          handleDragOver={handleDragOver}
-          handleDrop={handleDrop}
-          handleFileInputChange={handleFileInputChange}
-        />
-      )}
-    </div>
-    </div>
+      <div className="flex flex-col md:flex-row items-center gap-8">
   
-    <EraseButton
-      onClick={removerFundo}
-      status={status}
-      arquivoCarregado={!!arquivoCarregado}
-    />
-
-    <Footer/>
-  </main>
+        <div className="title-container">
+          <h1 className="text-3xl font-bold bg-indigo-800 text-transparent bg-clip-text">Remova Fundos de Imagens</h1>
+          <p>100% automático e de graça</p>
+        </div>
+  
+        <div className="flex items-center gap-3">
+          {urImagemRemovida ? (
+            <ErasedImage
+              urImagemRemovida={urImagemRemovida}
+              arquivoCarregado={arquivoCarregado?.name}
+            />
+          ) : (
+            <DragDropImage
+              arquivoArrastado={arquivoArrastado}
+              urlObjetoImagemCarregada={urlObjetoImagemCarregada}
+              handleDragEnter={handleDragEnter}
+              handleDragLeave={handleDragLeave}
+              handleDragOver={handleDragOver}
+              handleDrop={handleDrop}
+              handleFileInputChange={handleFileInputChange}
+            />
+          )}
+        </div>
+  
+      </div>
+  
+      <EraseButton
+        onClick={removerFundo}
+        status={status}
+        arquivoCarregado={!!arquivoCarregado}
+      />
+  
+      <Footer/>
+    </main>
   </>
+  
   );
 }
