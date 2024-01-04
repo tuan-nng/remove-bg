@@ -28,6 +28,21 @@ export function Footer() {
         <Bug strokeWidth={1.3} size={20} />
         Report an issue
       </a>
+      <div className="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
+  <div>
+    <a
+      title="Buy me a coffee"
+      href="https://www.buymeacoffee.com/yasminlopes"
+      target="_blank"
+      className="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
+    >
+      <img
+        className="object-cover object-center w-full h-full rounded-full"
+        src="https://th.bing.com/th/id/OIP.lodywf3xicY490sCNFaIAgHaHa?rs=1&pid=ImgDetMain"
+      />
+    </a>
+  </div>
+  </div>
     </div>
   );
 }
