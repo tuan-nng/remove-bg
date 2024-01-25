@@ -25,8 +25,18 @@ export default function Home() {
   const [historico, setHistorico] = useState<string[]>([]);
 
   useEffect(() => {
+    const imagens = localStorage.getItem('imagens');
+
+    if (imagens) {
+      setHistorico(JSON.parse(imagens));
+    }
+
     if (urImagemRemovida) {
-      setHistorico(prevHistorico => [...prevHistorico, urImagemRemovida]);
+      setHistorico(prevHistorico => {
+        const novoHistorico = [...prevHistorico, urImagemRemovida];
+        localStorage.setItem('imagens', JSON.stringify(novoHistorico));
+        return novoHistorico;
+      });
     }
   }, [urImagemRemovida])
 
