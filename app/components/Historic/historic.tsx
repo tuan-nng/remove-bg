@@ -14,7 +14,7 @@ export default function Historic({ listagem, onClick }: Props) {
         <button
         onClick={onClick}
         className="bg-indigo-600 text-white w-16 h-16 rounded-md flex items-center justify-center transition duration-300 ease-in-out hover:bg-indigo-500"
-        title="Remover fundo de outra imagem"
+        title="Remove background from another image"
       >
         <Plus/>
       </button>)}
@@ -22,7 +22,7 @@ export default function Historic({ listagem, onClick }: Props) {
             <img
               key={index}
               src={url}
-              alt={`Imagem Removida ${index + 1}`}
+              alt={`Image removed ${index + 1}`}
               className="w-16 h-16 object-cover rounded-md border-2 border-indigo-300"
             />
           ))}

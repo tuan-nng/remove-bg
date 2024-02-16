@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Remover fundo de imagem | By Yasmin Lopes',
-  description: 'Uma ferramenta para remover o fundo de imagens',
+  title: 'Remove Image Background',
+  description: 'A tool to remove background from images',
 }
 
 export default function RootLayout({

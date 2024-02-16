@@ -24,25 +24,25 @@ export default function EraseButton({ arquivoCarregado, status, onClick }: Props
       {!status && (
         <>
           <Eraser />
-          <span>Remover fundo</span>
+          <span>Remove Background</span>
         </>
       )}
       {arquivoCarregado && status === 'loading' && (
         <>
           <Loader2 className="animate-spin" />
-          <span>Removendo</span>
+          <span>Removing</span>
         </>
       )}
       {arquivoCarregado && status === 'success' && (
         <>
           <Check />
-          <span>Prontinho</span>
+          <span>Ready</span>
         </>
       )}
       {arquivoCarregado && status === 'fail' && (
         <>
           <X />
-          <span>Erro</span>
+          <span>Error</span>
         </>
       )}
     </button>
